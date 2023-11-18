@@ -21,4 +21,17 @@ export const InputContainer = styled.div`
       box-shadow: 0 0 0 3px #fea;
     }
   }
+
+  label {
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    padding-bottom: 0.5rem;
+  }
+
+  .error {
+    color: #f31;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
 `;

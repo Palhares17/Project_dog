@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import InputComponents from '../Form/Input';
 import Button from '../Form/Button/Button';
 import { ButtonStyle } from '../Form/Button/Button.style';
+import Input from '../Form/Input/Input';
+import useForm from '../../Hooks/useForm';
 
 function LoginForm() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const username = useForm();
+  const password = useForm();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,8 +32,8 @@ function LoginForm() {
       <h1>Login</h1>
 
       <form action="" onSubmit={handleSubmit}>
-        <InputComponents label="Usuário" type="text" name={username} />
-        <InputComponents label="Senha" type="password" name={password} />
+        <Input label="Usuário" type="text" name="username" {...username} />
+        <Input label="Senha" type="password" name="password" {...password} />
 
         <ButtonStyle>Entrar</ButtonStyle>
       </form>

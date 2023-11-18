@@ -3,7 +3,7 @@ import { ButtonStyle } from './Button.style';
 
 function Button({ children, ...props }) {
   return (
-    <ButtonStyle />
+    <ButtonStyle {...props}>{children}</ButtonStyle>
   );
 }
 
